@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { NavbarComponent } from './shared/navbar/navbar.component'; // Importa NavbarComponent
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [
+    RouterModule, // Importa RouterModule para `router-outlet`
+    NavbarComponent // Importa NavbarComponent para que Angular reconozca <app-navbar>
+  ]
 })
 export class AppComponent {
   title = 'ikomiPeruApp';
 }
+
+
+
